@@ -18,23 +18,20 @@ public class test
 	}
 	public void SetGrade(int m, int f)
 	{
-		if (ValidGrade(m, f)) 
-		{
-			Mid = m;
-			Final = f;
-		}
-    }
+///if (ValidGrade(m, f)){Mid = m;Final = f;}
+		Mid = m;
+		Final = f;
+	}
+	
 	private bool ValidGrade(int m , int f)
 	{
 		if (m >= 0 && m <= 100) 
 		{
-			if (f <= 0 && f <= 100) 
+			if (f >= 0 && f >= 100) 
 			{
 				return true;
 			}
-			return false;
 		}
+        return false;
     }
-
-
 }
